@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=XKu_SEDAykw
+
 // Naive
 function hasPairWithSum(arr, sum) {
   var len = arr.length;
