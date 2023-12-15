@@ -41,13 +41,13 @@ public class SearchInRotatedSortedArray {
         int target2 = 3;
         int[] nums3 = {1};
         int target3 = 0;
-        System.out.println(search2(nums1, target1)); //4
-        System.out.println(search2(nums2, target2)); //-1
-        System.out.println(search2(nums3, target3)); //-1
+        System.out.println(search(nums1, target1)); //4
+        System.out.println(search(nums2, target2)); //-1
+        System.out.println(search(nums3, target3)); //-1
 
     }
     // Approach 1: Brute force method
-    public static int search1(int[] nums, int target) {
+    public static int alternateSearch(int[] nums, int target) {
         int targetIndex = -1;
         for(int i=0; i<nums.length; i++) {
             if(nums[i] == target) {
@@ -57,7 +57,7 @@ public class SearchInRotatedSortedArray {
         return targetIndex;
     }
     // Approach 2: Binary Search Method
-    public static int search2(int[] nums, int target) {
+    public static int search(int[] nums, int target) {
         int notFound = -1;
         int left = 0;
         int right = nums.length - 1;

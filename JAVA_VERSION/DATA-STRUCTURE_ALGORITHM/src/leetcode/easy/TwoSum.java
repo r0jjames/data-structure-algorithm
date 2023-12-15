@@ -54,12 +54,12 @@ public class TwoSum {
         int[] nums = {3,2,4};
         int target = 6;
 
-        System.out.println(Arrays.toString(twoSum3(nums, target)));
+        System.out.println(Arrays.toString(twoSumBruteForce(nums, target)));
 
     }
 
     //Approach 1: Brute Force
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] twoSumBruteForce(int[] nums, int target) {
         int[] results = new int[2];
         for(int i=0; i < nums.length; i++) {
             for(int j=i+1; j < nums.length; j++) {
@@ -71,7 +71,7 @@ public class TwoSum {
         return results;
     }
     //Approach 2: Two-pass Hash Table
-    public static int[] twoSum2(int[] nums, int target) {
+    public static int[] twoSumHashing(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i=0; i<nums.length; i++) {
             map.put(nums[i], i);
@@ -86,7 +86,7 @@ public class TwoSum {
         return null;
     }
     //Approach 3: One-pass Hash Table
-    public static int[] twoSum3(int[] nums, int target) {
+    public static int[] twoSumSorting(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap();
         for(int i=0; i < nums.length; i++) {
             int compliment = target - nums[i];

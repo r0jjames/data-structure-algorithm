@@ -22,7 +22,7 @@ Constraints:
 -10 <= nums[i] <= 10
 The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
  */
-public class MaximumProductArray {
+public class MaximumProductSubarray {
     public static void main(String[] args) {
         int[] num1 = {2,3,-2,4};
         int[] num2 = {-2,0,-1};
