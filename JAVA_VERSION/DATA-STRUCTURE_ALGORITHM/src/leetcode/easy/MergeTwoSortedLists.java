@@ -36,35 +36,28 @@ public class MergeTwoSortedLists {
         printList(mergeTwoLists(list1, list2)); //[1,1,2,3,4,4]
 
     }
+    // Efficient Method
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        // Create a sentinal/dummy node to start
-        ListNode returnNode = new ListNode(Integer.MIN_VALUE);
-        // Create a copy of this node to iterate while solving the problem
-        ListNode headNode = returnNode;
-
-        // Traverse till one of the list reaches the end
-        while (l1 != null && l2 != null) {
-
-            // Compare the 2 values of lists
-            if (l1.val <= l2.val) {
-                returnNode.next = l1;
+        ListNode currentNode = new ListNode(0);
+        ListNode headNode = currentNode;
+        while(l1 != null && l2 != null) {
+            if(l1.val <=  l2.val) {
+                currentNode.next = l1;
                 l1 = l1.next;
             } else {
-                returnNode.next = l2;
+                currentNode.next = l2;
                 l2 = l2.next;
             }
-            returnNode = returnNode.next;
+            currentNode = currentNode.next;
         }
-
-        // Append the remaining list
-        if (l1 == null) {
-            returnNode.next = l2;
-        } else if (l2 == null) {
-            returnNode.next = l1;
+        if(l1 == null) {
+            currentNode.next = l2;
+        } else {
+            currentNode.next = l1;
         }
-        // return the next node to sentinal node
         return headNode.next;
     }
+
     static class ListNode {
         int val;
         ListNode next;
