@@ -3,6 +3,17 @@ package datastructure.hashtable;
 import java.util.ArrayList;
 
 public class HashTable {
+    public static void main(String[] args) {
+        HashTable hashTable = new HashTable();
+        hashTable.set("nails", 1000);
+        hashTable.set("tile", 50);
+        hashTable.set("lumber", 80);
+        hashTable.set("bolts", 200);
+        hashTable.set("screws", 140);
+        hashTable.printTable();
+        System.out.println(hashTable.keys());
+//        System.out.println(hashTable.get("tile"));
+    }
     private int arraySize = 7;
     private Node[] dataMap;
 
