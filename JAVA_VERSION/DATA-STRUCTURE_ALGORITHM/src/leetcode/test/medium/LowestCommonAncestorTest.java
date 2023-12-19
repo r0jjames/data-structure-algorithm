@@ -53,7 +53,7 @@ public class LowestCommonAncestorTest {
         leftNode.right = new TreeNode(4);
         rightNode.left = new TreeNode(7);
         rightNode.right = new TreeNode(9);
-        assertEquals(6, lowestCommonAncestor.lowestCommonAncestor(root, p, q));
+        assertEquals(expectedOutput, lowestCommonAncestor.lowestCommonAncestor(root, p, q).val);
     }
 
 
