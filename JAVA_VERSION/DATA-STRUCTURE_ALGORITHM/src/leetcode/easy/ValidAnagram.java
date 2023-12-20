@@ -1,7 +1,5 @@
 package leetcode.easy;
-/*
-https://leetcode.com/problems/valid-anagram/description/
- */
+
 public class ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         /*
