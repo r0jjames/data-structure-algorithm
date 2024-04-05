@@ -41,12 +41,12 @@ class ValidPalindromeTest {
     @Test
     void testValidPalindrome1() {
         String s =  "A man, a plan, a canal: Panama";
-        assertTrue(validPalindrome.isPalindrome(s));
+        assertTrue(validPalindrome.isPalindrome2(s));
     }
 
     @Test
     void testValidPalindrome2() {
         String s = "race a car";
-        assertFalse(validPalindrome.isPalindrome(s));
+        assertFalse(validPalindrome.isPalindrome2(s));
     }
 }
