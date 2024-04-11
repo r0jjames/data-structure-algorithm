@@ -2,6 +2,7 @@ package leetcode.easy;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 /*
 https://leetcode.com/problems/two-sum/
@@ -54,7 +55,7 @@ public class TwoSum {
         int[] nums = {3,2,4};
         int target = 6;
 
-        System.out.println(Arrays.toString(twoSumBruteForce(nums, target)));
+        System.out.println(Arrays.toString(twoSum2(nums, target)));
 
     }
 
@@ -96,5 +97,17 @@ public class TwoSum {
             map.put(nums[i], i);
         }
         return null;
+    }
+    public static int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> complement = new HashMap<>();
+        for(int i=0; i < nums.length; i++) {
+            int curVal = nums[i];
+            int diff = target - curVal;
+            if(complement.containsKey(diff)) {
+                return new int[] {complement.get(diff), i};
+            }
+            complement.put(curVal, i);
+        }
+        return new int[]{};
     }
 }

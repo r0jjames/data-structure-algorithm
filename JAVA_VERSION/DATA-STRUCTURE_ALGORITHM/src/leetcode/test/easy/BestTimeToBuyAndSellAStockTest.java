@@ -36,6 +36,7 @@ class BestTimeToBuyAndSellAStockTest {
         int[] prices = {7, 2, 4, 5, 1, 3, 6, 4};
 
         assertEquals(5, bestTimeToBuyAndSellAStock.maxProfit(prices));
+        assertEquals(5, bestTimeToBuyAndSellAStock.maxProfit2(prices));
     }
 
     @Test
@@ -43,6 +44,7 @@ class BestTimeToBuyAndSellAStockTest {
         int[] prices = {7, 1, 5, 3, 6, 4};
 
         assertEquals(5, bestTimeToBuyAndSellAStock.maxProfit(prices));
+        assertEquals(5, bestTimeToBuyAndSellAStock.maxProfit2(prices));
     }
 
     @Test
@@ -50,6 +52,7 @@ class BestTimeToBuyAndSellAStockTest {
         int[] prices = {7, 6, 4, 3, 1};
 
         assertEquals(0, bestTimeToBuyAndSellAStock.maxProfit(prices));
+        assertEquals(0, bestTimeToBuyAndSellAStock.maxProfit2(prices));
     }
 
     @Test
@@ -57,5 +60,6 @@ class BestTimeToBuyAndSellAStockTest {
         int[] prices = {2};
 
         assertEquals(0, bestTimeToBuyAndSellAStock.maxProfit(prices));
+        assertEquals(0, bestTimeToBuyAndSellAStock.maxProfit2(prices));
     }
 }

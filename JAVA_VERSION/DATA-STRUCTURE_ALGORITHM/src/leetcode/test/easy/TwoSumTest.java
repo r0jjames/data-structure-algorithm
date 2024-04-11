@@ -14,13 +14,13 @@ class TwoSumTest {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
 
-        int[] res = twoSum.twoSumHashing(nums, target);
+        int[] res = twoSum.twoSum2(nums, target);
         assertEquals(target, nums[res[0]] + nums[res[1]]);
 
-        res = twoSum.twoSumBruteForce(nums, target);
+        res = twoSum.twoSum2(nums, target);
         assertEquals(target, nums[res[0]] + nums[res[1]]);
 
-        res = twoSum.twoSumSorting(nums, target);
+        res = twoSum.twoSum2(nums, target);
         assertEquals(target, nums[res[0]] + nums[res[1]]);
     }
 
