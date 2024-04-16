@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class InvertedTree {
-
+    // Example of Depth First Search
     public TreeNode invertTreeRecursive(TreeNode root) {
 
         if (root == null)
@@ -21,7 +21,7 @@ public class InvertedTree {
 
         return root;
     }
-
+// Example of Level of order Traversal (Breadth First Search)
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;
@@ -43,6 +43,14 @@ public class InvertedTree {
 
             if (node.right != null) queue.add(node.right);
         }
+        return root;
+    }
+    public TreeNode invertTreeRecursive2(TreeNode root) {
+        if(root == null) return null;
+        TreeNode right = invertTreeRecursive2(root.right);
+        TreeNode left = invertTreeRecursive2(root.left);
+        root.left = right;
+        root.right = left;
         return root;
     }
 

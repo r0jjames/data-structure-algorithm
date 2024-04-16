@@ -60,6 +60,27 @@ class InvertedTreeTest {
         TreeNode invertedRecursive = invertTree.invertTreeRecursive(root);
         assertTrue(sameTree.isSameTree(expected, invertedRecursive));
     }
+    @Test
+    void testInvertTreeRecursive2() {
+        // Creating a tree like
+        //            2
+        //          /  \
+        //        1     3
+        TreeNode root = new TreeNode(2);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(3);
+
+        // Expecting a tree like
+        //            2
+        //          /  \
+        //        3     1
+        TreeNode expected = new TreeNode(2);
+        expected.left = new TreeNode(3);
+        expected.right = new TreeNode(1);
+
+        TreeNode invertedRecursive2 = invertTree.invertTreeRecursive2(root);
+        assertTrue(sameTree.isSameTree(expected, invertedRecursive2));
+    }
 
     @Test
     void testInvertTree2() {
@@ -76,7 +97,7 @@ class InvertedTreeTest {
     }
 
     @Test
-    void testInvertTreeRecursive2() {
+    void testInvertTreeRecursive3() {
         // Creating a tree like
         //            2
         TreeNode root = new TreeNode(2);
@@ -124,7 +145,7 @@ class InvertedTreeTest {
     }
 
     @Test
-    void testInvertTreeRecursive3() {
+    void testInvertTreeRecursive4() {
         // Creating a tree like
         //             1
         //          /     \
