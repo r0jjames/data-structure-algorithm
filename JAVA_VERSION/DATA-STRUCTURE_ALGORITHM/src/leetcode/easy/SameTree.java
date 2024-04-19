@@ -7,32 +7,32 @@ import java.util.Queue;
 
 public class SameTree {
 
-    public boolean isSameTree(TreeNode root1, TreeNode root2) {
-
+    public boolean isSameTree(TreeNode p, TreeNode q) {
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root1);
-        queue.add(root2);
-
-        // Loop till the queue is not empty
-        while (!queue.isEmpty()) {
+        queue.add(p);
+        queue.add(q);
+        while(!queue.isEmpty()) {
             TreeNode first = queue.poll();
             TreeNode second = queue.poll();
-
-            // Check for equality
-            if (first == null && second == null) {
+            if(first == null && second == null) {
                 continue;
-            } else if (
-                    first == null || second == null || first.val != second.val) {
+            }
+            else if (first == null || second == null || first.val != second.val) {
                 return false;
             }
-
-            // Add other nodes
             queue.add(first.left);
             queue.add(second.left);
             queue.add(first.right);
             queue.add(second.right);
         }
         return true;
+    }
+    public boolean isSameTreeDPS(TreeNode p, TreeNode q) {
+        if(p == null && q == null) return true;
+        if(p == null || q == null || p.val != q.val) return false;
+        boolean left = isSameTreeDPS(p.left, q.left);
+        boolean right = isSameTreeDPS(p.right, q.right);
+        return left && right;
     }
 
 }
