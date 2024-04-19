@@ -37,6 +37,7 @@ class MaximumDepthOfABinaryTreeTest {
 
         assertEquals(3, maximumDepthOfABinaryTree.maxDepth(root));
     }
+
     @Test
     void testMaxDepthRecursion1() {
         // Creating a tree that looks like
