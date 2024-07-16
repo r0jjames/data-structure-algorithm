@@ -15,7 +15,7 @@ public class ValidAnagram {
         int[] count_chars = new int[26];
 
         for(int i=0; i<s.length(); i++) {
-            count_chars[s.charAt(i)-'a']++;
+            count_chars[s.charAt(i)-'a']++; // UTF: a=97, b=98 ...
             count_chars[t.charAt(i)-'a']--;
         }
         for(int c: count_chars) {
